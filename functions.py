@@ -24,6 +24,7 @@ from statsmodels.formula.api import ols
 
 def metrics(y_train, train_preds, y_test, test_preds):
     '''
+    This function was written by Lindsey Berlin during Office Hours.
     Prints the R2 Score, Mean Absolute Error and Root Mean Squared Error
     Will unlog to get MAE & RMSE in terms of the original target if log=True
 
@@ -79,8 +80,11 @@ def metrics(y_train, train_preds, y_test, test_preds):
 
 
 
-# Create function to simultaneously run model and plot for normality
-# and homoscedasticity of residuals.
+######################################################################
+# Create function to simultaneously run model and plot for normality #
+# and homoscedasticity of residuals.                                 #
+######################################################################
+
 def result_plot(df):
     '''
     Creates function to run model and plot for normality, and homoscedasticity of residuals.
