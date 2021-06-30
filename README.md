@@ -1,12 +1,14 @@
-![cover](./images/seattlewaterfront.jpg)
+![cover](./images/seattle.jpg)
+
 # King County House Sales Analysis
 **Author**: Jennifer Ha
+
 ## Overview
 This analysis project explores trends in film business to provide Microsoft with actionable recommendations as they want to enter this business as well. we will review data sets from TheNumbers.com and IMDb to determine when Microsoft should release a movie, which types of genres to consider, and whom to recruit. The methodology includes grouping, filtering, and joining and visualizing data sets to show different trends in ROI. The result shows higher ROI when Mystery, Horror, and Animation movies are released in May-July, and November-December. I recommend Microsoft to partner with lists of Top 10 actors and directors in those genres, and release movies during the summer (May-July) or holiday season (Nov-Dec).
 ***
 ## Business Problem
 Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies.
-In order to assist the stakeholders at Microsoft to make data-driven decisions for their new business, we will be reviewing and analyzing datasets to provide a viable and profitable business option. The findings and recommendations will help the stakeholders with better understanding of the movie industry, to decide when to release their movies and who to work with to drive a successful outcome.
+In order to assist the stakeholders at Microsoft to make data-driven decisions for their new business, we will be reviewing and analyzing datasets to provide a viable and profitable business option. The findings and recommendations will help the stakeholders with better understanding of the movie industry, to decide when to release their movies and who to work with to drive a successful outcome.sadfd
 ***
 Questions to consider:
 * When is the best time of year to release a movie?
@@ -14,14 +16,26 @@ Questions to consider:
 * Who are the top casts and directors in those genres that Microsoft should work with?
 ***
 ## Data
-For this project, the following data sets from The Numbers and IMDb were used to answer the questions in the above.
-* `new_movie_budgets` & `tn_movie_budgets`: This data set from The Numbers contains movie production budget, domestic, and international revenue amount by movie, which will be used to conduct ROI analysis.
-* `imdb_name_basics`: This data set from IMDb contains general movie information with movie title, runtime, and genre(s). Every movie has a unique ID (`tconst`) assigned, which will be used as the primary key to join other imdb data sets.
-* `imdb_title_principals`: This data set from IMDb contains job titles for people who participated in a film with a unique ID (`nconst`) that can be used to identify individual participants. This data set also includes a foreign key (`tconst`).
-* `imdb_title_basics`: This data set from IMDb contains names of individuals in the business with their profession title(s), movies they participated listed with the `tconst`, and their unique ID `nconst`.
+The dataset consists of ~21600 rows of real estate transaction from King County, Seattle (WA) from 2014-2015. The columns represent different features associated with each property, which are outlined below. The target variable is the price of the property, which will be used in our models to determine the winning model, along with features that have strong relationships with it.
+
+### Columns
+* `bedrooms`: number of bedrooms
+* `bathrooms`: number of bathrooms
+* `sqft_living`: Square Foot Living Space
+* `sqft_lot`: Square Foot of Lot
+* `floors`: number of floors
+* `sqft_lot15`: Square Footage of nearest 15 lots
+* `has_been_renovated`: House has been renovated before
+* `ratio_15`: Ratio of sqft_living to sqft_living15
+* `waterfront`: Is a waterfront property
+* `grade`: King County Building Grade
+* `sqft_above`: Above Ground Square Footage
+* `yr_built`: Year building was built
+* `years_old`: Age of the building in years
+* `condition`: Condition of the house
 ***
 ## Methods
-This project uses descriptive analysis, including description of ROI trends. This provides a useful overview of ROI by release month, genre, and individual (cast & directors).
+Prior to iterating regression models and predictions, I conducted some exploratory data analyses to clean up the data using IQR method to prepare it for modeling, and went through several iterations to refine the model.
 ***
 ## Results
 ### Release movies in May, June, July, November, or December!
