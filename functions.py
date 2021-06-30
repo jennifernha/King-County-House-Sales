@@ -138,5 +138,20 @@ def model_summary(df):
     # Model regression
     model = smf.ols(f, df).fit()
     display(model.summary())
-    return model
-
+        # Create QQ plot
+    fig, ax = plt.subplots(ncols=2,figsize=(14,6))
+    sm.graphics.qqplot(model.resid,dist=stats.norm,fit=True,line='45',\
+                       ax=ax[0])
+    ax[0].set_title('QQ Plot')
+    
+    # Create homoscedasticity plot
+    resids = model.resid
+    sns.scatterplot(x=model.predict(df.drop('price',axis=1), transform=True),\
+                    y=model.resid, ax=ax[1])
+    ax[1].axhline(0, color='r')
+    ax[1].set_title('Homoscedasticity of Residuals')
+    ax[1].set_xlabel('Predicted Price')
+    ax[1].set_ylabel('Residuals')
+    
+    
+    return model, fig, ax
