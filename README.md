@@ -7,7 +7,7 @@
 This project analyzes house sales data in King County in Seattle from 2014-2015, which consists of ~21,600 transactions. Through some exploratory data analyses and iterative regression models, we will identify some features that have the strongest relationship with price.. The result shows that the model with feature engineering was the best-performing model, also revealing that waterfront properties, more viewings to potential buyers, and higher grading using King County grading system have the biggest impact on house prices.
 ***
 ## Business Problem
-Star Real Estate Agency (imaginary real estate company in Seattle) is seeking advice to close deals with higher housing sales prices. In this project, we are providing analysis on what type of properties they should prioritize to acquire for their listing as well as how to attract buyers. We are creating a model to estimate the price of a home when those criterias are met. Questions to consider:
+Star Real Estate Agency (imaginary real estate company in Seattle) is seeking advice to close deals with higher housing sales prices. In this project, we are providing analysis on which features can bring more monetary value as well as strategy. We are also creating a model to estimate the price of a home when those criterias are met. Questions to consider:
 * Is a waterfront property worth more than an inland property?
 * Does the number of viewings to potential buyers affect the housing price?
 * Does the King County grading system affect the housing price?
