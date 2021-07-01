@@ -13,7 +13,7 @@ Star Real Estate Agency (imaginary real estate company in Seattle) is seeking ad
 * Does the King County grading system affect the housing price?
 ***
 ## Data
-The dataset consists of ~21600 rows of real estate transactions from King County, Seattle (WA) from 2014-2015. The columns represent different features associated with each property, which are outlined below. The target variable is the price of the property, which will be used in our models to determine the winning model, along with features that have strong relationships with it.
+The dataset consists of ~21,600 rows of real estate transactions from King County, Seattle (WA) from 2014-2015. The columns represent different features associated with each property, which are outlined below. The target variable is the price of the property, which will be used in our models to determine the winning model, along with features that have strong relationships with it.
 
 ### Columns
 * `bedrooms`: number of bedrooms
