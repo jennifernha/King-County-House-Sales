@@ -36,17 +36,21 @@ Prior to iterating regression models and predictions, I conducted some explorato
 ***
 ## Results
 I created several multiple linear regression models, and the best-performing was Model 3 which I used feature engineering (One Hot Encoding). The model and the exploratory data analysis while preparing the data showed that `waterfront`, `grade`, and `view` are the strongest predictors of the housing price. 
+
 ![graph1](./images/model_3_lr.png)
 ![graph2](./images/model_3_qq.png)
-![graph3](./images/model_3_home)
+![graph3](./images/model_3_home.png)
 ### Secure waterfront properties when available!
 While there are not that many, our analysis shows that a waterfront property can be worth $344,597 more than an inland property on average.
+
 ![graph4](./images/waterfront_graph.png)
 ### Advertise and show the properties to many people!
 Overall, the analysis shows that the housing prices increase when more groups of people get the tour. On average, houses with the most number of viewings were sold at a price $354,748 more than houses with 0 views. 
+
 ![graph5](./images/view_graph.png)
 ### Grading matters!
 Higher grades yield higher housing prices. I recommend the team to avoid including low grade properties as the sales price increases with higher grade.
+
 ![graph6](./images/grade_graph.png)
 ***
 ## Conclusions
@@ -70,4 +74,3 @@ For additional info, contact Jennifer Ha at jnha1119@gmail.com
 ├── README.md                                   
 └── functions.py 
   
- 
