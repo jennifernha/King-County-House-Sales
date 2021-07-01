@@ -7,13 +7,10 @@
 This analysis project explores trends in film business to provide Microsoft with actionable recommendations as they want to enter this business as well. we will review data sets from TheNumbers.com and IMDb to determine when Microsoft should release a movie, which types of genres to consider, and whom to recruit. The methodology includes grouping, filtering, and joining and visualizing data sets to show different trends in ROI. The result shows higher ROI when Mystery, Horror, and Animation movies are released in May-July, and November-December. I recommend Microsoft to partner with lists of Top 10 actors and directors in those genres, and release movies during the summer (May-July) or holiday season (Nov-Dec).
 ***
 ## Business Problem
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies.
-In order to assist the stakeholders at Microsoft to make data-driven decisions for their new business, we will be reviewing and analyzing datasets to provide a viable and profitable business option. The findings and recommendations will help the stakeholders with better understanding of the movie industry, to decide when to release their movies and who to work with to drive a successful outcome.sadfd
-***
-Questions to consider:
-* When is the best time of year to release a movie?
-* Which genres are the most profitable and yield the highest ROI?
-* Who are the top casts and directors in those genres that Microsoft should work with?
+Star Real Estate Agency (imaginary real estate company in Seattle) is seeking advice to close deals with higher housing sales prices. In this project, we are providing analysis on what type of properties they should prioritize to acquire for their listing as well as how to attract buyers. We are creating a model to estimate the price of a home when those criterias are met. Questions to consider:
+* Is a waterfront property worth more than an inland property?
+* Does the number of viewings to potential buyers affect the housing price?
+* Does the King County grading system affect the housing price?
 ***
 ## Data
 The dataset consists of ~21600 rows of real estate transaction from King County, Seattle (WA) from 2014-2015. The columns represent different features associated with each property, which are outlined below. The target variable is the price of the property, which will be used in our models to determine the winning model, along with features that have strong relationships with it.
@@ -38,6 +35,8 @@ The dataset consists of ~21600 rows of real estate transaction from King County,
 Prior to iterating regression models and predictions, I conducted some exploratory data analyses to clean up the data using IQR method to prepare it for modeling, and went through several iterations to refine the model.
 ***
 ## Results
+I created several multiple linear regression models, and the best-performing was Model 3 which I used feature engineering (One Hot Encoding). The model and the exploratory data analysis while preparing the data showed that `waterfront`, `grade`, and `view` are the strongest predictors of the housing price. 
+
 ### Release movies in May, June, July, November, or December!
 Domestically and internationally, we see the highest ROI in May, June, July, November, December. Such trend tells us that people are more willing to go watch a movie during the summertime and holiday seasons towards the end of year.
 
@@ -56,18 +55,13 @@ This analysis provides Microsoft with lists of actors and directors who were par
 ![graph9](./images/directors_animation.png)
 ***
 ## Conclusions
-This analysis leads to three recommendations for creating movies:
+Our winning model (Model 3) has an R squared value of 0.831, indicating that the model is capable of explaining 83.1% of the variability in a property's price.From this analysis, we can conclude that `waterfront`, `grade`, and `view` are features that have strong relationship with the target variable (`price`). Model 3 combined with EDA performed in the above led to below three recommendations.
 
-**1. Release movies in May, June, July, November, or December.** Our analysis shows that summertime and holiday seasons are the best time of year to release a movie. If Microsoft wants to release a movie across the world simultaneously, I recommend launching a movie in June or July. If a different timeline can be applied, release a movie in the States in May first, then internationally in June.
+**1. Secure waterfront properties when available.** While there are not that many, our analysis shows that a waterfront property can be worth $344,597 more than an inland property on average. There were only 146 waterfront properties to begin with in the data set, which consists of 0.80% of the total transactions. Given that acquiring a waterfront property is quite rare and a waterfront property can be worth a lot more, I recommend the team to prioritize acquiring waterfront properties to their listings. 
 
-**2. Produce a movie in Mystery, Horror, Animation genres.** Microsoft has the capability to run movie business in many countries as it has many locations worldwide. Therefore, I recommend producing a movie in Mystery, Horror, and Animation to target audience globally.
+**2. Advertise and show the properties to many people** It was very evident from our analysis that the housing price has a direct relationship with the number of viewings to potential buyers. I highly recommend advertising each property if possible, and creating a small "competition" will definitely help.
 
-**3. Recruit people with proven stats.** I provided lists of Top 10 actors and directors in Top 3 genres that generated the most profit. Microsoft should contact these individuals and try to recruit them to enter this competitive movie industry.
-***
-## Next Steps
-Further analyses could lead to additional insights:
-* **ROI Trend in Popular Genres**: while we have identified which top 3 genres have generated the most profit, such analysis can provide whether if the business is continuously growing in those genres over time.
-* **Ideal Budget Range**: This modeling could predict the ideal production budget for the movies that Microsoft wants to produce.
+**3. Grading matters!** Higher grades yield higher housing prices. I recommend the team to avoid including low grade properties as the sales price increases with higher grade. This will provide the team with opportunities to close deals in their/seller's favor.
 ***
 ## For More Information
 See the full analysis in the [Jupyter Notebook](http://localhost:8888/notebooks/King%20County%20House%20Sales%20Analysis.ipynb) or review this [presentation](https://github.com/jennifernha/Microsoft-Movie-Analysis/blob/main/Presentation.pdf).
