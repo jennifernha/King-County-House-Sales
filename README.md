@@ -35,11 +35,8 @@ The dataset consists of ~21,600 rows of real estate transactions from King Count
 Prior to iterating regression models and predictions, I conducted some exploratory data analyses to clean up the data using IQR method to prepare it for modeling, and went through several iterations to refine the model.
 ***
 ## Results
-I created several multiple linear regression models, and the best-performing was Model 3 which I used feature engineering (One Hot Encoding). The model and the exploratory data analysis while preparing the data showed that `waterfront`, `grade`, and `view` are the strongest predictors of the housing price. 
+I created several multiple linear regression models, and the best-performing was Model 3 which I used feature engineering (One Hot Encoding). The model and the exploratory data analysis while preparing the data showed that `sqft_living`, `grade`, and `sqft_above` are the strongest predictors of the housing price. 
 
-![graph1](./images/model_3_lr.png)
-![graph2](./images/model_3_qq.png)
-![graph3](./images/model_3_home.png)
 ### Secure waterfront properties when available!
 While there are not that many, our analysis shows that a waterfront property can be worth $344,597 more than an inland property on average.
 
@@ -54,13 +51,17 @@ Higher grades yield higher housing prices. I recommend the team to avoid includi
 ![graph6](./images/grade_graph.png)
 ***
 ## Conclusions
-Our winning model (Model 3) has an R squared value of 0.831, indicating that the model is capable of explaining 83.1% of the variability in a property's price.From this analysis, we can conclude that `waterfront`, `grade`, and `view` are features that have strong relationship with the target variable (`price`). Model 3 combined with EDA performed in the above led to below three recommendations.
+Our winning model (Model 3) has an R squared values of 0.83, indicating that the model is capable of explaining 83% of the variability in a property's price. However, I want to point out that model 5 is also a very strong when all things considered (R squared values, Q-Q plot, and homoscedasticity plot). From this analysis, we can conclude that `sqft_living`, `grade`, and `sqft_above` are features that have strong relationship with the target variable (`price`). Model 3 combined with EDA performed in the above led to below three recommendations.
 
-**1. Secure waterfront properties when available.** While there are not that many, our analysis shows that a waterfront property can be worth $344,597 more than an inland property on average. There were only 146 waterfront properties to begin with in the data set, which consists of 0.80% of the total transactions. Given that acquiring a waterfront property is quite rare and a waterfront property can be worth a lot more, I recommend the team to prioritize acquiring waterfront properties to their listings. 
+**1. It's all about the size!** Expectedly, our analysis shows that the space of a property matters the most and will add the most value to the house sales price. While having a variety of listings to satisfy different buyers, it would be the best to prioritize buyers looking for a house for their family.
 
-**2. Advertise and show the properties to many people.** It was very evident from our analysis that the housing price has a direct relationship with the number of viewings to potential buyers. I highly recommend advertising each property if possible, and creating a small "competition" will definitely help.
+**2. Larger living space apart from basement!** While the overall size of space matters, it is more imperative to have larger space above the ground.
 
-**3. Grading matters.** Higher grades yield higher housing prices. I recommend the team to avoid including low grade properties as the sales price increases with higher grade. This will provide the team with opportunities to close deals in their/seller's favor.
+**3. Secure waterfront properties when available!** While there are not that many, our analysis shows that a waterfront property can be worth $344,597 more than an inland property on average. There were only 146 waterfront properties to begin with in the data set, which consists of 0.80% of the total transactions. Given that acquiring a waterfront property is quite rare and a waterfront property can be worth a lot more, I recommend the team to prioritize acquiring waterfront properties to their listings. 
+
+**4. Advertise and show the properties to many people!** It was very evident from our analysis that the housing price has a direct relationship with the number of viewings to potential buyers. I highly recommend advertising each property if possible, and creating a small "competition" will definitely help.
+
+**5. Grading matters!** Higher grades yield higher housing prices. I recommend the team to avoid including low grade properties as the sales price increases with higher grade. This will provide the team with opportunities to close deals in their/seller's favor.
 ***
 ## For More Information
 See the full analysis in the [Jupyter Notebook](http://localhost:8888/notebooks/King%20County%20House%20Sales%20Analysis.ipynb) or review this [presentation](https://github.com/jennifernha/King-County-House-Sales/blob/main/Presentation.pdf).
