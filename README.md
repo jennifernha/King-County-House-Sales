@@ -15,21 +15,6 @@ Star Real Estate Agency (imaginary real estate company in Seattle) is seeking ad
 ## Data
 The dataset consists of ~21,600 rows of real estate transactions from King County, Seattle (WA) from 2014-2015. The columns represent different features associated with each property, which are outlined below. The target variable is the price of the property, which will be used in our models to determine the winning model, along with features that have strong relationships with it.
 
-### Columns
-* `bedrooms`: number of bedrooms
-* `bathrooms`: number of bathrooms
-* `sqft_living`: Square Foot Living Space
-* `sqft_lot`: Square Foot of Lot
-* `floors`: number of floors
-* `sqft_lot15`: Square Footage of nearest 15 lots
-* `has_been_renovated`: House has been renovated before
-* `ratio_15`: Ratio of sqft_living to sqft_living15
-* `waterfront`: Is a waterfront property
-* `grade`: King County Building Grade
-* `sqft_above`: Above Ground Square Footage
-* `yr_built`: Year building was built
-* `years_old`: Age of the building in years
-* `condition`: Condition of the house
 ***
 ## Methods
 Prior to iterating regression models and predictions, I conducted some exploratory data analyses to clean up the data using IQR method to prepare it for modeling, and went through several iterations to refine the model.
